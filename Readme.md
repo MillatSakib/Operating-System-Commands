@@ -97,3 +97,63 @@ Output:
 PWD=/home/sakib
 OLDPWD=/home/sakib/Desktop
 ```
+
+## Current User:
+
+To see current user we can execute the command below:
+
+```sh
+whoami
+```
+
+To see the detailed information of user you can use command below:
+
+```sh
+who
+```
+
+We can also see display the boot time using `-b` flag. The command are given below:
+
+```sh
+who -H
+```
+
+## Password:
+
+For set password on any user we can execute the command below:
+
+```sh
+sudo passwd username
+```
+
+**Force to change password**
+
+If you want to force a user to change their password to their next login then you can execute the command below:
+
+```sh
+sudo passwd --expire username
+```
+
+**Lock a user**
+
+Root or super user can lock/disable an user without deleting the account. User can't access their account until the super user are unlock the account. The command are given below:
+
+```sh
+sudo passwd -l username
+```
+
+**Unlock a locked user account**
+
+I the super user want then he can unlock a locked account using the `-u` flag.
+
+```sh
+sudo passwd -u username
+```
+
+**Expiry date of password:**
+
+Super user can also set the expiry date of a password also using the command below:
+
+```sh
+sudo passwd -x 30 username
+```
