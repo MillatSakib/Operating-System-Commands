@@ -157,3 +157,23 @@ Super user can also set the expiry date of a password also using the command bel
 ```sh
 sudo passwd -x 30 username
 ```
+
+## File Create and Edit:
+
+We can make a file using the `touch` command like below:
+
+```sh
+touch hello.txt
+```
+
+We can read text type document file using the command below:
+
+```sh
+cat hello.txt
+```
+
+We can edit and make a file using vim editor using the command below:
+
+```sh
+vi hello.txt #hello.txt are file name
+```
