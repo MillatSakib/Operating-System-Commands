@@ -73,6 +73,12 @@ Output:
 
 **See all environment Variable:** For see all environment variable we can use the command `env`.
 
+**Create a local environment Variable:** We can create a local environment variable using the command below:
+
+```sh
+export MyName=Orfiaz
+```
+
 **See current directory:** If we want to see the current directory then we can execute the command below:
 
 ```sh
@@ -177,3 +183,41 @@ We can edit and make a file using vim editor using the command below:
 ```sh
 vi hello.txt #hello.txt are file name
 ```
+
+## Users:
+
+**See All User:** We can see all user using the command below:
+
+```sh
+awk -F: '{print $1}' /etc/passwd
+```
+
+**Add User:** We can create an user using the command below:
+
+```sh
+sudo useradd -m shafiq #-m are use for make the home directory of new user.
+```
+
+**Delete User:** If we want to delete the existing user the we can do it using the command below:
+
+```sh
+sudo userdel -r -f shafiq
+```
+
+Here -f we are use bacause if the user are loged in then it also can perform and delete the user. and -r are user for remove all directory on the user which I removed.
+
+**Update Password:** Now if wee want to add password on any user or change the password then we can use the command below:
+
+```sh
+sudo passwd shafiq # Here shafiq is the user name
+```
+
+**Swithcing User:** After creating the new user we have to switch the user. For switching the user we have to use the the command below:
+
+```sh
+su - shafiq
+```
+
+If we want to switch to the superuser then we can use the command `su`.
+
+**Note: You have to perform all task of user using the root user.**
